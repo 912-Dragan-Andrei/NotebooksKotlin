@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_corner_deco"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bottom_corner_deco"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_max="400dp"
+        android:orientation="vertical"
+
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/feedback"
+            android:visibility="visible"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="397dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="186dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/white_input_field"
+                android:importantForAccessibility="no" />
+
+            <ImageButton
+                android:id="@+id/joinNotebookButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:layout_centerVertical="true"
+                android:translationY="-3dp"
+                android:layout_alignParentEnd="true"
+                android:translationX="-40dp"
+                android:elevation="0.1dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/join_notebook_button"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/joinNotebookEditText"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="140dp"
+                android:layout_height="48dp"
+                android:singleLine="true"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:translationY="-2dp"
+                android:layout_alignParentStart="true"
+                android:translationX="40dp"
+                android:hint="@string/join_notebook_input_message"
+                android:background="@null"
+                android:textColor="@color/main_dark"
+                android:autofillHints=""
+                tools:ignore="LabelFor,TextFields" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/createNotebookButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/create_notebook_action_message"
+            android:textColor="@color/main_dark"
+            android:textSize="20sp"
+            android:translationY="-16dp"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="397dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

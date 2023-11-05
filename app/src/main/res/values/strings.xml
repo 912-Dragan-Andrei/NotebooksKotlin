@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Notebooks</string>
+    <string name="slogan">Write what matters</string>
+    <string name="join_notebook_input_message">join a notebook...</string>
+    <string name="create_notebook_action_message"><u>or create a new one</u></string>
+    <string name="create_notebook_code_text">You are going to create a new notebook. Your code is</string>
+    <string name="create_notebook_warning">Keep it safe since you wouldn’t be able to join without it!</string>
+    <string name="cancel">cancel</string>
+    <string name="confirm">confirm</string>
+    <string name="notebook_created_successfully">notebook created successfully</string>
+    <string name="error_creating_notebook">there was an error creating your notebook! please try again later!</string>
+    <string name="name">Name</string>
+    <string name="urgent_status">not urgent</string>
+    <string name="urgent_message">urgent</string>
+    <string name="not_urgent_message">not urgent</string>
+    <string name="date">19/10/2023</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</string>
+    <string name="assigned_to">assigned to:</string>
+    <string name="back">back</string>
+    <string name="notebook_code">#23ffw45a</string>
+    <string name="slogan_tiny">write what matters</string>
+    <string name="add_new_note">add new note</string>
+    <string name="urgent">urgent</string>
+    <string name="create_a_new_note">create a new note</string>
+    <string name="insert_your_note">insert your note...</string>
+    <string name="owner">name...</string>
+    <string name="assigned_to_input_text">assigned to...</string>
+    <string name="add_note">add note</string>
+    <string name="blank_error">the message and your name shouldn\'t be left blank</string>
+    <string name="message">Message</string>
+    <string name="update_a_note">update a note</string>
+    <string name="update">update</string>
+</resources>

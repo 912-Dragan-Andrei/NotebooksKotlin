@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:letterSpacing=".2"
+        android:text="@string/back"
+        android:textColor="@color/main_dark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/joinIDTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="0.1dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/notebook_code"
+        android:textAlignment="center"
+        android:textColor="@color/main_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationY="-14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinIDTextView"
+        app:srcCompat="@drawable/underline"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/main_dark"
+        android:letterSpacing=".3"
+        android:textSize="20sp"
+        android:text="@string/update_a_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinIDTextView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bottom_corner_deco"
+        android:importantForAccessibility="no" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UseSwitchCompatOrMaterialXml">
+
+        <Switch
+            android:id="@+id/urgentSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:thumb="@drawable/custom_selector"
+            android:track="@drawable/custom_track" />
+
+        <TextView
+            android:id="@+id/notUrgentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/urgentSwitch"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/not_urgent_message"
+            android:textColor="@color/secondary_dark"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/urgentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/urgentSwitch"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/urgent_message"
+            android:textColor="@color/secondary_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/messageInputLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/urgentSwitch"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="0.1dp"
+
+            android:fontFamily="@font/inter_regular"
+            android:text="message"
+            android:textColor="@color/secondary_dark"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/noteInput"
+
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/messageInputLabel"
+            android:layout_marginTop="-10dp"
+
+            android:background="@color/white"
+            app:srcCompat="@drawable/white_big_input_field"
+            android:scaleType="fitCenter"
+
+            android:importantForAccessibility="no" />
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignStart="@+id/noteInput"
+            android:layout_alignTop="@+id/noteInput"
+            android:layout_alignEnd="@+id/noteInput"
+            android:layout_alignBottom="@+id/noteInput"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="36dp"
+
+            android:autofillHints=""
+            android:background="@null"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="start|top"
+            android:hint="@string/insert_your_note"
+            android:inputType="textMultiLine"
+            android:textColor="@color/main_dark"
+
+            android:textSize="18sp"
+            tools:ignore="LabelFor,TextFields" />
+
+        <TextView
+            android:id="@+id/nameInputLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/noteInput"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:elevation="0.1dp"
+
+            android:fontFamily="@font/inter_regular"
+            android:text="name"
+            android:textColor="@color/secondary_dark"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"  />
+
+        <ImageView
+            android:id="@+id/ownerInput"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:layout_below="@+id/nameInputLabel"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginStart="0dp"
+
+            android:layout_marginTop="-17dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/white_input_field" />
+
+        <TextView
+            android:id="@+id/assignedInputLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/ownerInput"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginTop="-12dp"
+            android:layout_marginStart="20dp"
+
+            android:elevation="0.1dp"
+
+            android:fontFamily="@font/inter_regular"
+            android:text="assigned"
+            android:textColor="@color/secondary_dark"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/assignedInput"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:layout_below="@+id/ownerInput"
+
+            android:layout_marginTop="-4dp"
+
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/white_input_field"
+            tools:ignore="ImageContrastCheck" />
+
+        <EditText
+            android:id="@+id/ownerEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ownerInput"
+            android:layout_alignEnd="@+id/ownerInput"
+            android:layout_alignBottom="@+id/ownerInput"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="24dp"
+
+            android:autofillHints=""
+            android:background="@null"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="left|center"
+            android:hint="@string/owner"
+            android:singleLine="true"
+            android:textColor="@color/main_dark"
+            android:textSize="18sp"
+            tools:ignore="RtlHardcoded,TextFields" />
+
+        <EditText
+            android:id="@+id/assignedEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/assignedInput"
+            android:layout_alignTop="@+id/assignedInput"
+            android:layout_alignBottom="@+id/assignedInput"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="22dp"
+            android:autofillHints=""
+            android:background="@null"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="left|center"
+            android:hint="@string/assigned_to_input_text"
+            android:singleLine="true"
+            android:textColor="@color/main_dark"
+            android:textSize="18sp"
+            tools:ignore="RtlHardcoded,TextFields" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/assignedInput"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/add_update_note" />
+
+        <TextView
+            android:id="@+id/updateNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_alignBottom="@+id/imageView6"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:letterSpacing=".2"
+            android:text="@string/update"
+            android:textColor="@color/white"
+            android:translationX="-2dp"
+            android:translationY="-2dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/blank_error"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.476" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
